@@ -2,20 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Oke SMS</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="center">
+    <header class="has-text-centered">
         <img class="logo" src="logo.svg" alt="Oke SMS Logo">
     </header>
-    <section id="hero" class="container">
-        <div class="center">
-            <h1>OkeSMS</h1>
-            <p></p>
-            <form action="">
-                <input type="text" name="phone_number" placeholder="Masukan nomor ponsel anda" />
-            </form>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-8 is-variable">
+                    <div class="column is-one-thirds is-hidden-mobile">
+                        <img class="hero-image" src="phone_stack_without_space.png" alt="Phone sms">
+                    </div>
+                    <div class="column column is-two-third has-text-left">
+                        <h1>Oke SMS</h1>
+                        <p>Solusi SMS untuk perusahaan anda. SMS OTP, SMS Notifikasi, SMS Marketting, dll.</p>
+                        <p>Dapatkan kesempatan memenangkan 500 SMS Reguler gratis ketika layanan kami sudah siap.</p>
+                        <form action="" method="post">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Masukan nomor ponsel anda" />
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-dark is-fullwidth" type="submit">Ya, saya mau sms gratis</button>
+                                </div>
+                                <em class="help">* Kami akan mengirimkan anda sms konfirmasi</em>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </body>

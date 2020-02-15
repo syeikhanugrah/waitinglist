@@ -1,15 +1,7 @@
 html, body {
     margin: 0;
-    padding: 0
-}
-
-html {
-    font-size: 16px
-}
-
-body {
-    font-family: "Segoe UI", "Arial", sans-serif;
-    font-size: 16px;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,7 +9,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
     font-weight: 600;
     line-height: 1.1;
-    letter-spacing: -.025rem
 }
 
 h1 {
@@ -32,6 +23,11 @@ h3 {
     font-size: 1.2rem
 }
 
+p {
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+}
+
 header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -42,16 +38,10 @@ header .logo {
     height: 1.75rem;
 }
 
-.center {
-    text-align: center;
-}
-
 .container {
-    max-width: 50rem;
-    padding: 2rem 1rem;
-    margin: 0 auto;
+    max-width: 800px;
 }
 
-.hero {
-    height: 100vh;
+.hero-image {
+    height: 450px;
 }
