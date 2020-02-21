@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=onload" async defer></script>
+    <script>
+        function validate(e) {
+            e.preventDefault();
+
+            if (!document.getElementById('ponsel-field')) {
+                alert('Nomor ponsel dibutuhkan');
+            } else {
+                grecaptcha.execute();
+            }
+        }
+        
+        function onLoad() {
+            let element = document.getElementById('submit');
+
+            element.onclick = validate;
+        }
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header class="has-text-centered">
@@ -29,17 +47,21 @@
                         <p>Solusi SMS untuk perusahaan anda. SMS OTP, SMS Notifikasi, SMS Marketting, dll.</p>
                         <p>Dapatkan kesempatan memenangkan 500 SMS Reguler gratis ketika layanan kami sudah siap.</p>
                         <form action="" method="post">
-                            <div class="g-recaptcha" data-sitekey="6LeAwdoUAAAAAGG8E-hOfnVUzlGi5eQ2qD1fzlkG"></div>
+                            <div id='recaptcha' class="g-recaptcha"
+                                 data-sitekey="6LeAwdoUAAAAAGG8E-hOfnVUzlGi5eQ2qD1fzlkG"
+                                 data-callback="onSubmit"
+                                 data-size="invisible">
+                            </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Masukan nomor ponsel anda" />
+                                    <input id="ponsel-field" class="input" type="text" placeholder="Masukan nomor ponsel anda" />
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <button class="button is-dark is-fullwidth" type="submit">Ya, saya mau sms gratis</button>
+                                    <button id="submit" class="button is-dark is-fullwidth" type="submit">Ya, saya mau sms gratis</button>
                                 </div>
                                 <em class="help">* Kami akan mengirimkan anda sms konfirmasi</em>
                             </div>
@@ -49,5 +71,7 @@
             </div>
         </div>
     </section>
+
+    <script>onLoad();</script>
 </body>
 </html>
