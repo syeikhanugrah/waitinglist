@@ -14,8 +14,8 @@
         function validate(e) {
             e.preventDefault();
 
-            if (!document.getElementById('ponsel-field')) {
-                alert('Nomor ponsel dibutuhkan');
+            if (!document.getElementById('ponsel-field').value) {
+                alert('Nomor ponsel harus diisi');
             } else {
                 grecaptcha.execute();
             }
